@@ -1,0 +1,74 @@
+.employees {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .employee {
+        background: $background_12dp;
+        max-width: 400px;
+        width: 300px;
+        .top {
+            background: $background_24dp;
+            padding: 10px;
+            .name {
+                font-size: 2rem;
+                color: $on_surface;
+            }
+        }
+        .bottom {
+            padding: 10px;
+            .email,
+            .number {
+                color: $on_surface;
+                margin-bottom: 10px;
+            }
+        }
+        &-editor {
+            &-options {
+                list-style: none;
+                padding: 0;
+                margin: 0px -10px;
+                display: flex;
+                flex-direction: row;
+                &_option {
+                    width: 100%;
+                    height: 50px;
+                    font-size: 2rem;
+                    margin-top: 5px;
+                    line-height: 1.57;
+                    border: 0;
+                    display: flex;
+                    text-align: center;
+                    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+                    justify-content: center;
+                    cursor: pointer;
+                    &.edit {
+                        background: $primary;
+                        color: $on_primary;
+                        transition: all 0.25s ease-in-out;
+                    }
+                    &.delete {
+                        background: $error;
+                        color: $on_error;
+                        transition: all 0.25s ease-in-out;
+                    }
+                    p {
+                        width: 100%;
+                        user-select: none;
+                        cursor: pointer;
+                    }
+                    &:hover {
+                        line-height: 1.4;
+                        font-size: 2.2rem;
+                        transition: all 0.25s ease-in-out;
+                        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+                    }
+                }
+                li {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+#company {
+    margin: 0;
+    .company-details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 50px;
+        height: 100%;
+        background: $background_24dp;
+        justify-content: center;
+        margin-bottom: 30px;
+        &_contact {
+            margin: 0px 15px 10px 15px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .employees-form_container {
+        background: $background_12dp;
+        max-width: 2000px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        .employees-create {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            &_value {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                &_label {
+                    color: $on_surface;
+                    font-size: 1.5rem;
+                }
+                &_input {
+                    color: $on_surface;
+                    background-color: $background_24dp;
+                    border: 0;
+                    font-size: 2rem;
+                    &:focus {
+                        outline: 5px solid $on_surface;
+                    }
+                }
+                &_error {
+                    color: $error;
+                }
+            }
+            .submit {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                &-btn {
+                    font-size: 2rem;
+                    color: $on_primary;
+                    border: none;
+                    padding: 5px 10px;
+                    background: $primary;
+                    border-radius: 5px;
+                    height: fit-content;
+                    cursor: pointer;
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    #company {
+        .company-details {
+            &_contact {
+                margin: 0px 15px;
+            }
+        }
+    }
+}

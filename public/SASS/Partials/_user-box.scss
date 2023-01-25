@@ -1,0 +1,43 @@
+.user-box {
+    width: 200px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    background: $background;
+    z-index: 10;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    .logout-btn {
+        color: $error;
+        font-size: 1rem;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+    .user-name {
+        color: $on_surface;
+    }
+    .login-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .user-box {
+        max-width: fit-content;
+        top: 10px;
+        right: 10px;
+        .user-name {
+            display: none;
+        }
+        .logout-btn {
+            font-size: 1.5rem;
+        }
+    }
+}

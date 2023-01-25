@@ -1,0 +1,89 @@
+#edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    .edit-container {
+        max-width: calc(100vw - 30px);
+        width: 500px;
+        background: $background_12dp;
+        border-radius: 5px;
+        padding: 30px;
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            h1 {
+                font-size: 3rem;
+                color: $on_surface;
+            }
+        }
+        .edit {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .value-container {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                width: 100%;
+                position: relative;
+                justify-content: center;
+                &_label {
+                    color: $on_surface;
+                    font-size: 1.5rem;
+                }
+                .logo {
+                    margin-top: 20px;
+                    &-preview {
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+                input[type="file"]::file-selector-button {
+                    border-radius: 3px;
+                    background: $primary;
+                    border: 0;
+                    color: $on_primary;
+                    cursor: pointer;
+                }
+                &_input {
+                    color: $on_surface;
+                    background-color: $background_24dp;
+                    border: 0;
+                    font-size: 2rem;
+                    height: 100%;
+                    &:focus {
+                        outline: 5px solid $on_surface;
+                    }
+                }
+                &_error {
+                    color: $error;
+                }
+            }
+            .submit {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                &-btn {
+                    font-size: 2rem;
+                    color: $on_primary;
+                    border: none;
+                    padding: 5px 10px;
+                    background: $primary;
+                    border-radius: 5px;
+                    height: fit-content;
+                    cursor: pointer;
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

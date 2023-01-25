@@ -1,0 +1,25 @@
+header {
+    height: 25vh;
+    background: $background_04dp;
+    position: relative;
+    .title {
+        color: $on_surface;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .back_btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    header {
+        .title {
+            font-size: 4rem;
+        }
+    }
+}

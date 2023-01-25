@@ -1,0 +1,246 @@
+#companies {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    .companies {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 15px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .company {
+            width: 100%;
+            max-width: 500px;
+            background: $background_24dp;
+            margin: 0px 15px 15px 15px;
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &_logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 150px;
+                background: $background_12dp;
+                margin: 0px -10px;
+                .logo {
+                    height: 100px;
+                    width: 100px;
+                    border: 5px solid $primary;
+                    border-radius: 50%;
+                }
+            }
+            &_name {
+                color: $on_surface;
+                opacity: $emphasis_high;
+                text-decoration: underline;
+                text-align: center;
+                font-size: 1.75rem;
+                margin-bottom: 0px;
+            }
+            &-details {
+                padding-bottom: 10px;
+                font-size: 1rem;
+                &_email,
+                &_website {
+                    margin: 0px 0px 5px 0px;
+                    a {
+                        color: $on_surface;
+                        opacity: $emphasis_medium;
+                        &:hover {
+                            opacity: $emphasis_high;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &_editor {
+                &-options {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0px -10px;
+                    display: flex;
+                    flex-direction: row;
+                    &_option {
+                        width: 100%;
+                        height: 50px;
+                        font-size: 2rem;
+                        line-height: 1.57;
+                        border: 0;
+                        display: flex;
+                        text-align: center;
+                        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+                        justify-content: center;
+                        cursor: pointer;
+                        &.edit {
+                            background: $primary;
+                            color: $on_primary;
+                            transition: all 0.25s ease-in-out;
+                        }
+                        &.delete {
+                            background: $error;
+                            color: $on_error;
+                            transition: all 0.25s ease-in-out;
+                        }
+                        p {
+                            width: 100%;
+                            user-select: none;
+                            cursor: pointer;
+                        }
+                        &:hover {
+                            line-height: 1.4;
+                            font-size: 2.2rem;
+                            transition: all 0.25s ease-in-out;
+                            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+                        }
+                    }
+                    li {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .nav-links {
+        color: $on_background;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        .page-tracker_text {
+            opacity: $emphasis_medium;
+        }
+        .pagination {
+            display: flex;
+            flex-direction: row;
+            .page-item {
+                background: $background_12dp;
+                text-align: center;
+                line-height: 2;
+                border: 2px solid $primary;
+                border-right: 0px;
+                .page-link {
+                    display: flex;
+                    height: 50px;
+                    width: 50px;
+                    justify-content: center;
+                    align-items: center;
+                    user-select: none;
+                }
+                &.active {
+                    background: $primary;
+                    box-shadow: inset 0px 0px 5px $on_secondary;
+                }
+                &:first-of-type,
+                &:last-of-type {
+                    background: $background_24dp;
+                    font-size: 2rem;
+                }
+                &.disabled {
+                    .page-link {
+                        opacity: $emphasis_disabled;
+                    }
+                }
+                &:first-of-type {
+                    border-radius: 15px 0px 0px 15px;
+                }
+                &:last-of-type {
+                    border-radius: 0px 15px 15px 0px;
+                    border-right: 2px solid $primary;
+                }
+            }
+        }
+    }
+    .companies-form_container {
+        background: $background_12dp;
+        max-width: 2000px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        .companies-create {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            &_value {
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                position: relative;
+                justify-content: center;
+                &_label {
+                    color: $on_surface;
+                    font-size: 1.5rem;
+                }
+                input[type="file"]::file-selector-button {
+                    border-radius: 3px;
+                    background: $primary;
+                    border: 0;
+                    color: $on_primary;
+                    cursor: pointer;
+                }
+                &_input {
+                    color: $on_surface;
+                    background-color: $background_24dp;
+                    border: 0;
+                    font-size: 2rem;
+                    height: 100%;
+                    &:focus {
+                        outline: 5px solid $on_surface;
+                    }
+                }
+                &_error {
+                    color: $error;
+                }
+            }
+            .submit {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                &-btn {
+                    font-size: 2rem;
+                    color: $on_primary;
+                    border: none;
+                    padding: 5px 10px;
+                    background: $primary;
+                    border-radius: 5px;
+                    height: fit-content;
+                    cursor: pointer;
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    #companies {
+        .companies {
+            .company {
+                &_name {
+                    font-size: 2.5rem;
+                }
+                &-details {
+                    font-size: 1.5rem;
+                }
+            }
+            &-form_container {
+                .companies-create {
+                    .submit {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+        .nav-links {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
